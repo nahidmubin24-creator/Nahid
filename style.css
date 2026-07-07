@@ -1,0 +1,253 @@
+/* ===========================
+   Nahid ❤️ Maskura Mim
+   Premium Birthday Website
+=========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* Loader */
+
+#loader{
+position:fixed;
+width:100%;
+height:100vh;
+background:#000;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:9999;
+animation:fadeOut 3s forwards;
+animation-delay:3s;
+}
+
+#loader h1{
+font-size:55px;
+color:#ff4d6d;
+text-shadow:0 0 30px #ff4d6d;
+}
+
+#loader p{
+margin-top:20px;
+letter-spacing:5px;
+}
+
+/* Hero */
+
+.hero{
+height:100vh;
+background:url("assets/img/bg.jpg") center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+backdrop-filter:blur(3px);
+}
+
+.content{
+position:relative;
+z-index:2;
+text-align:center;
+padding:30px;
+}
+
+.content h1{
+font-size:75px;
+color:#fff;
+text-shadow:0 0 30px hotpink;
+animation:zoom 3s infinite;
+}
+
+.content h2{
+font-size:40px;
+margin-top:15px;
+}
+
+.content h3{
+color:#ff5e95;
+font-size:35px;
+margin:20px 0;
+}
+
+.content p{
+max-width:700px;
+margin:auto;
+line-height:35px;
+font-size:22px;
+}
+
+.btn{
+display:inline-block;
+margin-top:35px;
+padding:18px 45px;
+border-radius:50px;
+text-decoration:none;
+background:#ff4d6d;
+color:white;
+font-size:20px;
+transition:.4s;
+box-shadow:0 0 30px #ff4d6d;
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+/* Letter */
+
+.letter{
+padding:120px 10%;
+text-align:center;
+}
+
+.letter h1{
+font-size:55px;
+margin-bottom:40px;
+}
+
+#typing{
+font-size:26px;
+line-height:45px;
+}
+
+/* Gallery */
+
+#gallery{
+padding:120px 8%;
+}
+
+#gallery h1{
+text-align:center;
+font-size:55px;
+margin-bottom:50px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.gallery img{
+width:100%;
+border-radius:25px;
+transition:.5s;
+cursor:pointer;
+box-shadow:0 0 30px rgba(255,0,100,.4);
+}
+
+.gallery img:hover{
+transform:scale(1.08) rotate(2deg);
+}
+
+/* Counter */
+
+.counter{
+padding:120px;
+text-align:center;
+}
+
+.counter h1{
+font-size:55px;
+}
+
+.counter h2{
+margin:25px;
+color:#ff5e95;
+}
+
+#loveCounter{
+font-size:38px;
+font-weight:bold;
+}
+
+/* Cake */
+
+.cake{
+padding:120px;
+text-align:center;
+}
+
+.birthdayCake{
+width:220px;
+height:220px;
+margin:auto;
+border-radius:50%;
+background:linear-gradient(#ff7aa2,#ff2d55);
+box-shadow:0 0 50px hotpink;
+animation:float 3s infinite;
+}
+
+/* Animations */
+
+@keyframes zoom{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0);}
+}
+
+@keyframes fadeOut{
+to{
+opacity:0;
+visibility:hidden;
+}
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.content h1{
+font-size:45px;
+}
+
+.content h2{
+font-size:28px;
+}
+
+.content h3{
+font-size:24px;
+}
+
+.letter h1,
+#gallery h1,
+.counter h1{
+font-size:35px;
+}
+
+#typing{
+font-size:18px;
+line-height:32px;
+}
+
+.btn{
+padding:15px 30px;
+font-size:18px;
+}
+
+}
